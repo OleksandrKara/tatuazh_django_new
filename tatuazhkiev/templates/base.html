@@ -1,0 +1,149 @@
+{% load static %}
+{% with first_item='/' second_item='/articles/' third_item='/photo/' forth_item='/prices/' five_item='/contacts/' six_item='/contacts/' %} 
+<!DOCTYPE html>
+<html>
+<head>
+	<!--<meta charset="utf-8">-->
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<title>{% block title %}{% endblock %}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% block libs %}
+		<!-- Bootstrap -->
+		<link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/fonts/fonts.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'css/bootstrap/style.css' %}" rel="stylesheet">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+			<![endif]-->
+	{% endblock %}	
+</head>
+<body>
+
+<header class="main__header">
+  <div class="container">
+    <nav class="navbar navbar-default" role="navigation"> 
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span> 
+			<span class="icon-bar"></span> 
+			<span class="icon-bar"></span> </button>
+        <h1 class="navbar-brand"><a href="index.html">beauty salon</a></h1>
+      </div>
+		
+	  {% block menu %}{% endblock %}
+	  
+    </nav>
+  </div>
+</header>
+
+
+{% block slider %}
+<section class="slider">
+  <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel"> 
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+      <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+      <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active"> <img data-src="images/slider/slider1.jpg" alt="First slide" src="{% static 'images/slider/slider1.jpg' %} ">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Sodales <span>Accumsan</span></h1>
+            <p>Lacus volutpat, dignissim scelerisque felis</p>
+            <p><a class="btn btn-primary" href="http://www.htmlpreviews.com/cloud/beauty-salon/eterations3/index.html#" role="button">buy now</a><a class="btn btn-default" href="http://www.htmlpreviews.com/cloud/beauty-salon/eterations3/index.html#" role="button">learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="item"> <img data-src="images/slider/slider2.jpg" alt="Second slide" src="{% static 'images/slider/slider2.jpg' %}">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Quisque <span>vul</span>putate</h1>
+            <p>Aliquam hendrerit imperdiet nulla eu pretium</p>
+            <p><a class="btn btn-primary" href="index.html#" role="button">order</a><a class="btn btn-default" href="index.html#" role="button">details</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="item"> <img data-src="images/slider/slider3.jpg" alt="First slide" src="{% static 'images/slider/slider3.jpg' %}">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1><span>Morbi</span> sodales</h1>
+            <p>Phasellus pellentesque vehicula magna sit</p>
+            <p><a class="btn btn-primary" href="index.html#" role="button">purchase</a><a class="btn btn-default" href="http://www.htmlpreviews.com/cloud/beauty-salon/eterations3/index.html#" role="button">why us</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="index.html#myCarousel" data-slide="prev">
+		<span class="glyphicon carousel-control-left"></span>
+	</a> 
+		<a class="right carousel-control" href="index.html#myCarousel" data-slide="next">
+		<span class="glyphicon carousel-control-right"></span>
+	</a> 
+	</div>
+</section>
+{% endblock %}
+	
+{% block content %}{% endblock %}
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h3>About</h3>
+        <p>We strive to deliver a level of service that exceeds the expectations of our customers. <br>
+          <br>
+          If you have any questions about our products or services, please do not hesitate to contact us. We have friendly, knowledgeable representatives available seven days a week to assist you.</p>
+      </div>
+      <div class="col-md-3">
+        <h3>Tweets</h3>
+        <p><span>Tweet</span> <a href="http://www.htmlpreviews.com/cloud/beauty-salon/eterations3/index.html#">@You</a><br>
+          Etiam egestas, ipsum posuere accumsan sollicitudin, nulla mauris volutpat sem, sit amet rutrum risus. </p>
+        <p><span>Tweet</span> <a href="http://www.htmlpreviews.com/cloud/beauty-salon/eterations3/index.html#">@You</a><br>
+          Quisque porta tellus vitae adipiscing molestie. Mauris et lacus blandit, malesuada.</p>
+      </div>
+      <div class="col-md-3">
+        <h3>Mailing list</h3>
+        <p>Subscribe to our mailing list for offers, news updates and more!</p>
+        <br>
+        <form action="http://www.htmlpreviews.com/cloud/beauty-salon/eterations3/index.html#" method="post" class="form-inline" role="form">
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputEmail2">your email:</label>
+            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="your email:">
+          </div>
+          <button type="submit" class="btn btn-primary">subscribe</button>
+        </form>
+      </div>
+      <div class="col-md-3">
+        <h3>Social</h3>
+        <p>123 Business Way<br>
+          San Francisco, CA 94108<br>
+          USA<br>
+          <br>
+          Phone: (888) 123-4567<br>
+          Fax: (887) 123-4567<br>
+          <br>
+        </p>
+        <div class="social__icons"> <a href="http://www.htmlpreviews.com/cloud/beauty-salon/eterations3/index.html#" class="socialicon socialicon-twitter"></a> <a href="http://www.htmlpreviews.com/cloud/beauty-salon/eterations3/index.html#" class="socialicon socialicon-facebook"></a> <a href="http://www.htmlpreviews.com/cloud/beauty-salon/eterations3/index.html#" class="socialicon socialicon-google"></a> </div>
+      </div>
+    </div>
+    <hr>
+    <p class="text-center">© Copyright ABC Company. All Rights Reserved.</p>
+  </div>
+</footer>
+
+{% block add_libs %}
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script type="text/javascript" src="{% static 'js/jquery/jquery.min.js' %}"></script> 
+	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script> 
+{% endblock %}
+
+</body></html>
+
+{% endwith %}
