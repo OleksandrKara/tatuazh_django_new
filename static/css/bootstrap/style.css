@@ -5,7 +5,7 @@ Custom Styles. Bootstrap Styles are default'
 }
 body {
 	font-family: Calibri, sans-serif;
-	background: url('../images/bg.jpg') repeat;
+	background: url('../../images/bg.jpg') repeat;
 	color: #9e9ba8;
 }
 a, input, button {
@@ -16,7 +16,7 @@ a, input, button {
 }
 /*Header*/
 header.main__header {
-	background: #17161c url('../images/lights_bg.jpg') no-repeat center top;
+	background: #17161c url("../../images/lights_bg.jpg") no-repeat center top;
 	background-size: 100% 200%;
 }
 header.with-boxed {
@@ -93,7 +93,7 @@ p.big-paragraph {
 }
 /* grey-info-block */
 .grey-info-block {
-	background: url('../images/big_line_bg.jpg') no-repeat;
+	background: url('../../images/big_line_bg.jpg') no-repeat;
 	background-size: 100% 100%;
 	width: 100%;
 	margin: 0;
@@ -132,7 +132,7 @@ p.big-paragraph {
 	line-height: 36px;
 	position: absolute;
 	bottom: -9px;
-	background: url('../images/bg.jpg') repeat;
+	background: url('../../images/bg.jpg') repeat;
 	padding: 0 50px;
 	margin-left: -170px;
 }
@@ -151,16 +151,16 @@ p.big-paragraph {
 	padding-left: 65px;
 }
 .recent-posts .col-md-4 .icon-item.docs {
-	background: url('../images/icons/icon1.png') no-repeat left top;
+	background: url('../../images/icons/icon1.png') no-repeat left top;
 }
 .recent-posts .col-md-4 .icon-item.image {
-	background: url('../images/icons/icon2.png') no-repeat left top;
+	background: url('../../images/icons/icon2.png') no-repeat left top;
 }
 .recent-posts .col-md-4 .icon-item.photo {
-	background: url('../images/icons/icon3.png') no-repeat left top;
+	background: url('../../images/icons/icon3.png') no-repeat left top;
 }
 .recent-posts .col-md-4 .icon-item.audio {
-	background: url('../images/icons/icon4.png') no-repeat left top;
+	background: url('../../images/icons/icon4.png') no-repeat left top;
 }
 /* Forms */
 .form-control, .form-control:focus {
@@ -327,22 +327,22 @@ button.btn-primary:focus {
 	-moz-opacity: 1;
 }
 .carousel-control .carousel-control-left {
-	background: url('../images/slider/prev.png') no-repeat;
+	background: url('../../images/slider/prev.png') no-repeat;
 	width: 100px;
 	height: 100px;
 	top: 265px;
 }
 .carousel-control .carousel-control-right {
-	background: url('../images/slider/next.png') no-repeat;
+	background: url('../../images/slider/next.png') no-repeat;
 	width: 100px;
 	height: 100px;
 	top: 265px;
 }
 .carousel-control .carousel-control-left:hover {
-	background: url('../images/slider/prev_a.png') no-repeat;
+	background: url('../../images/slider/prev_a.png') no-repeat;
 }
 .carousel-control .carousel-control-right:hover {
-	background: url('../images/slider/next_a.png') no-repeat;
+	background: url('../../images/slider/next_a.png') no-repeat;
 }
 .boxed .carousel-control .carousel-control-left {
 	left: -150px;
@@ -384,13 +384,13 @@ button.btn-primary:focus {
 	height: 34px;
 }
 .socialicon-twitter {
-	background: url('../images/social/twitter.png') no-repeat;
+	background: url('../../images/social/twitter.png') no-repeat;
 }
 .socialicon-facebook {
-	background: url('../images/social/facebook.png') no-repeat;
+	background: url('../../images/social/facebook.png') no-repeat;
 }
 .socialicon-google {
-	background: url('../images/social/google.png') no-repeat;
+	background: url('../../images/social/google.png') no-repeat;
 }
 /* Contact Form */
 .contact-form {
@@ -412,7 +412,7 @@ aside h3 span {
 	position: relative;
 	top: 1px;
 	padding-right: 30px;
-	background: url('../images/bg.jpg') repeat;
+	background: url('../../images/bg.jpg') repeat;
 }
 aside img {
 	width: 100%;
@@ -439,11 +439,11 @@ aside a.btn {
 	position: relative;
 	top: 1px;
 	padding-right: 30px;
-	background: url('../images/bg.jpg') repeat;
+	background: url('../../images/bg.jpg') repeat;
 }
 /* Footer */
 footer {
-	background: #17161c url('../images/lights_bg.jpg') no-repeat center top;
+	background: #17161c url('../../images/lights_bg.jpg') no-repeat center top;
 	background-size: 100% 100%;
 	padding: 45px 0 20px;
 	color: rgba(255,255,255,0.6);
@@ -872,7 +872,7 @@ h3 {
 	width: auto;
 }
 .grey-info-block {
-	background: url('../images/big_line_bg.jpg') top center no-repeat;
+	background: url('../../images/big_line_bg.jpg') top center no-repeat;
 	background-size: auto 100%;
 }
 .carousel-caption {
