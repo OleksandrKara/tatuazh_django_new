@@ -8,10 +8,13 @@ from django.http import HttpResponse
 
 def xhr_test(request):
 	name = request.POST.get('name')
-	phone = request.POST.get('phone')
+	email = request.POST.get('email')
+	subject = request.POST.get('subject')
+	message = request.POST.get('message')
+	
 	send_mail(
 		"Please call me back!",
-        "Name: "+ name + "\nPhone: " + phone,
+        "Name: "+ name + "\nE-mail: " + email + "\nSubject: " + subject + "\nMessage: " + message,
 		request.POST.get('olexandr.kara@gmail.com'),
                 ['kiev.tatuazh@gmail.com'],
 	)

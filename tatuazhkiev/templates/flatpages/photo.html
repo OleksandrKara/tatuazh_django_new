@@ -42,7 +42,7 @@ second_item third_item forth_item five_item six_item-->
   <div class="container">
     <div id="portfolio" class="row no_padding title__block nothing no-margin">
       <ul class="list-unstyled controls">
-        <li class="filter active" data-filter="all">Show All</li>
+        <li class="filter active" data-filter="all">Показать все фото</li>
         <li class="filter" data-filter="br">Брови</li>
         <li class="filter" data-filter="gu">Губы</li>
         <li class="filter" data-filter="gl">Глаза</li>
@@ -55,7 +55,7 @@ second_item third_item forth_item five_item six_item-->
 						{% thumbnail fotoGl.image_location "379x253" crop="50%" as small_foto %}
 							<img alt="" src="{{  small_foto.url }}" width="{{ small_foto.width }}" height="{{ small_foto.height }}" class="img-responsive">
 						 {% endthumbnail %}
-						<span class="text">{{ fotoGl.comment }}<span>{{ fotoGl.comment }}</span></span>
+						<span class="text">{{ fotoGl.comment_first }}<span>{{ fotoGl.comment_second }}</span></span>
 					</a>
 				</li>
 			{% endfor %}
@@ -66,7 +66,7 @@ second_item third_item forth_item five_item six_item-->
 						{% thumbnail fotoGu.image_location "379x253" crop="50%" as small_foto %}
 							<img alt="" src="{{  small_foto.url }}" width="{{ small_foto.width }}" height="{{ small_foto.height }}" class="img-responsive">
 						 {% endthumbnail %}
-						<span class="text">{{ fotoGu.comment }}<span>{{ fotoGu.comment }}</span></span>
+						<span class="text">{{ fotoGu.comment_first }}<span>{{ fotoGu.comment_second }}</span></span>
 					</a>
 				</li>
 			{% endfor %}
@@ -77,7 +77,7 @@ second_item third_item forth_item five_item six_item-->
 						{% thumbnail fotoBr.image_location "379x253" crop="50%" as small_foto %}
 							<img alt="" src="{{  small_foto.url }}" width="{{ small_foto.width }}" height="{{ small_foto.height }}" class="img-responsive">
 						 {% endthumbnail %}
-						<span class="text">{{ fotoBr.comment }}<span>{{ fotoBr.comment }}</span></span>
+						<span class="text">{{ fotoBr.comment_first }}<span>{{ fotoBr.comment_second }}</span></span>
 					</a>
 				</li>
 			{% endfor %}

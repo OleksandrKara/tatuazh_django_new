@@ -374,7 +374,8 @@ DROP TABLE IF EXISTS `fotos_foto`;
 CREATE TABLE `fotos_foto` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(300) NOT NULL,
-  `comment` varchar(300) NOT NULL,
+  `comment_first` varchar(300) NOT NULL,
+  `comment_second` varchar(300) NOT NULL,
   `type` varchar(2) NOT NULL,
   `image_location` varchar(100) NOT NULL,
   `date` datetime NOT NULL,
@@ -388,7 +389,7 @@ CREATE TABLE `fotos_foto` (
 
 LOCK TABLES `fotos_foto` WRITE;
 /*!40000 ALTER TABLE `fotos_foto` DISABLE KEYS */;
-INSERT INTO `fotos_foto` VALUES (1,'Губы 1','Татуаж губ, зажившие.','Gu','images/1b-gubi.jpg','2014-09-03 14:26:43'),(2,'Губы 2','Татуаж губ, сразу после процедуры','Gu','images/2b-gubi.jpg','2014-09-03 14:26:43'),(3,'Губы 3','Татуаж губ, зажившие.','Gu','images/3b-gubi.jpg','2014-09-03 14:26:43'),(4,'Глаза 1','Заживший татуаж век.','Gl','images/1b-glaza.jpg','2014-09-03 14:26:43'),(5,'Глаза 2','Татуаж стрелок, спустя 2 месяца.','Gl','images/2b-glaza.jpg','2014-09-03 14:26:43'),(6,'Глаза 3','Татуаж глаз, сразу просле процедуры.','Gl','images/I_eOOpQF5TU.jpg','2014-09-03 14:26:43'),(14,'Брови 1','Татуаж бровей, сразу после процедуры и месяц спустя.','Br','images/2b-brovi_3.jpg','2014-09-21 10:10:00');
+INSERT INTO `fotos_foto` VALUES (1,'Губы 1','Татуаж губ, зажившие.','Анна Кара','Gu','images/1b-gubi.jpg','2014-09-03 14:26:43'),(2,'Губы 2','Татуаж губ, сразу после процедуры','Анна Кара','Gu','images/2b-gubi.jpg','2014-09-03 14:26:43'),(3,'Губы 3','Татуаж губ, зажившие.','Анна Кара','Gu','images/3b-gubi.jpg','2014-09-03 14:26:43'),(4,'Глаза 1','Заживший татуаж век.','Анна Кара','Gl','images/1b-glaza.jpg','2014-09-03 14:26:43'),(5,'Глаза 2','Татуаж стрелок, спустя 2 месяца.','Анна Кара','Gl','images/2b-glaza.jpg','2014-09-03 14:26:43'),(6,'Глаза 3','Татуаж глаз, сразу просле процедуры.','Анна Кара','Gl','images/I_eOOpQF5TU.jpg','2014-09-03 14:26:43'),(14,'Брови 1','Татуаж бровей, сразу после процедуры и месяц спустя.','Анна Кара','Br','images/2b-brovi_3.jpg','2014-09-21 10:10:00');
 /*!40000 ALTER TABLE `fotos_foto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -425,4 +426,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-09-21 13:35:21
+-- Dump completed on 2014-09-21 14:02:22

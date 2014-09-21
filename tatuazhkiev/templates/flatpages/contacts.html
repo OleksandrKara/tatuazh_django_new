@@ -50,7 +50,7 @@ second_item third_item forth_item five_item six_item-->
 	  <br>
       <div class="row">
         <div class="col-md-8">
-          <h3>Send us a message</h3>
+          <h3>Обратная связь:</h3>
           <hr>
           <p>Our friendly customer service representatives are committed to answering all your questions and meeting any need you may have. We would love to hear from you! Please fill out the form below so we may assist you.</p>
           <br>
@@ -100,7 +100,7 @@ second_item third_item forth_item five_item six_item-->
 					var data4 = $('#message').val();
 			$.ajax({
 				type: "POST",
-				url: "send.php",
+				url: "/xhr_test",
 				dataType : "json",
 				data: ( {"name" : data1, "subject" : data2, "email" : data3,"message" : data4} ) ,
 				   success: function() {
