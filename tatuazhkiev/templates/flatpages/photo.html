@@ -1,11 +1,14 @@
 {% extends "base.html" %}
+
 {% load static %}
+{% load thumbnail %}
+
 {% block title %}
-	{{ flatpage.title }}
+	Татуаж в Киеве - Фото татуаж
 {% endblock %}
 
 {% block libs %}
-	<link rel="stylesheet" href="./static/css/galery/magnific-popup.css">
+	<link rel="stylesheet" href="{% static 'css/galery/magnific-popup.css' %}">
 	{{ block.super }}
 {% endblock %}
 
@@ -40,42 +43,45 @@ second_item third_item forth_item five_item six_item-->
     <div id="portfolio" class="row no_padding title__block nothing no-margin">
       <ul class="list-unstyled controls">
         <li class="filter active" data-filter="all">Show All</li>
-        <li class="filter" data-filter="webdesign">Web Design</li>
-        <li class="filter" data-filter="printing">Printing</li>
-        <li class="filter" data-filter="development">We Development</li>
-        <li class="filter" data-filter="seo">SEO Optimization</li>
+        <li class="filter" data-filter="br">Брови</li>
+        <li class="filter" data-filter="gu">Губы</li>
+        <li class="filter" data-filter="gl">Глаза</li>
       </ul>
 	 
-	  <!--<ul id="Grid" class="gallery">
-        <li class="mix webdesign col-sm-4 mix_all" style="display: block; opacity: 1;">
-			<a href="./media/photo/gallery1.jpg">
-				<img alt="" src="./media/photo/gallery1.jpg" class="img-responsive"> 
-				<span class="text">Nulla quis lectus eget<span>Lorem ipsum dolor sit amet, consectetuer.</span></span>
-			</a> 
-		</li>-->
-		
-		{% for foto in fotos %}
-			<li class="mix webdesign col-sm-4 mix_all" style="display: block; opacity: 1;">
-				<a href="{{  foto.image_location.url }}">
-					<img alt="" src="{{  foto.image_location.url }}" class="img-responsive">
-					<span class="text">{{ foto.comment1 }}<span>{{ foto.comment2 }}</span></span>
-				</a>
-			</li>
-		{% endfor %}
-		<!--
-        <li class="mix printing col-sm-4 mix_all" style="display: block; opacity: 1;"> <a href="./media/photo/gallery2.jpg"><img alt="" src="./media/photo/gallery2.jpg" class="img-responsive"> <span class="text">Nulla quis lectus eget<span>Lorem ipsum dolor sit amet, consectetuer.</span></span></a> </li>
-        <li class="mix development col-sm-4 mix_all" style="display: block; opacity: 1;"> <a href="./media/photo/gallery3.jpg"><img alt="" src="./media/photo/gallery3.jpg" class="img-responsive"> <span class="text">Nulla quis lectus eget<span>Lorem ipsum dolor sit amet, consectetuer.</span></span></a> </li>
-        <li class="mix seo col-sm-4 mix_all" style="display: block; opacity: 1;"> <a href="./media/photo/gallery4.jpg"><img alt="" src="./media/photo/gallery4.jpg" class="img-responsive"> <span class="text">Nulla quis lectus eget<span>Lorem ipsum dolor sit amet, consectetuer.</span></span></a> </li>
-        <li class="mix seo col-sm-4 mix_all" style="display: block; opacity: 1;"> <a href="./media/photo/gallery5.jpg"><img alt="" src="./media/photo/gallery5.jpg" class="img-responsive"> <span class="text">Nulla quis lectus eget<span>Lorem ipsum dolor sit amet, consectetuer.</span></span></a> </li>
-        <li class="mix development col-sm-4 mix_all" style="display: block; opacity: 1;"> <a href="./media/photo/gallery6.jpg"><img alt="" src="./media/photo/gallery6.jpg" class="img-responsive"> <span class="text">Nulla quis lectus eget<span>Lorem ipsum dolor sit amet, consectetuer.</span></span></a> </li>
-        <li class="mix printing col-sm-4 mix_all" style="display: block; opacity: 1;"> <a href="./media/photo/gallery7.jpg"><img alt="" src="./media/photo/gallery7.jpg" class="img-responsive"> <span class="text">Nulla quis lectus eget<span>Lorem ipsum dolor sit amet, consectetuer.</span></span></a> </li>
-        <li class="mix development col-sm-4 mix_all" style="display: block; opacity: 1;"> <a href="./media/photo/gallery8.jpg"><img alt="" src="./media/photo/gallery8.jpg" class="img-responsive"> <span class="text">Nulla quis lectus eget<span>Lorem ipsum dolor sit amet, consectetuer.</span></span></a> </li>
-        <li class="mix printing col-sm-4 mix_all" style="display: block; opacity: 1;"> <a href="./media/photo/gallery9.jpg"><img alt="" src="./media/photo/gallery9.jpg" class="img-responsive"> <span class="text">Nulla quis lectus eget<span>Lorem ipsum dolor sit amet, consectetuer.</span></span></a> </li>
-        <li class="mix webdesign col-sm-4 mix_all" style="display: block; opacity: 1;"> <a href="./media/photo/gallery10.jpg"><img alt="" src="./media/photo/gallery10.jpg" class="img-responsive"> <span class="text">Nulla quis lectus eget<span>Lorem ipsum dolor sit amet, consectetuer.</span></span></a> </li>
-        <li class="mix seo col-sm-4 mix_all" style="display: block; opacity: 1;"> <a href="./media/photo/gallery11.jpg"><img alt="" src="./media/photo/gallery11.jpg" class="img-responsive"> <span class="text">Nulla quis lectus eget<span>Lorem ipsum dolor sit amet, consectetuer.</span></span></a> </li>
-        <li class="mix webdesign col-sm-4 mix_all" style="display: block; opacity: 1;"> <a href="./media/photo/gallery12.jpg"><img alt="" src="./media/photo/gallery12.jpg" class="img-responsive"> <span class="text">Nulla quis lectus eget<span>Lorem ipsum dolor sit amet, consectetuer.</span></span></a> </li>
-      </ul>-->
-
+		<ul id="Grid" class="gallery">
+			{% for fotoGl in fotosGl %}
+				<li class="mix gl col-sm-4 mix_all" style="display: block; opacity: 1;">
+					<a href="{{  fotoGl.image_location.url }}">
+						{% thumbnail fotoGl.image_location "379x253" crop="50%" as small_foto %}
+							<img alt="" src="{{  small_foto.url }}" width="{{ small_foto.width }}" height="{{ small_foto.height }}" class="img-responsive">
+						 {% endthumbnail %}
+						<span class="text">{{ fotoGl.comment }}<span>{{ fotoGl.comment }}</span></span>
+					</a>
+				</li>
+			{% endfor %}
+			
+			{% for fotoGu in fotosGu %}
+				<li class="mix gu col-sm-4 mix_all" style="display: block; opacity: 1;">
+					<a href="{{  fotoGu.image_location.url }}">
+						{% thumbnail fotoGu.image_location "379x253" crop="50%" as small_foto %}
+							<img alt="" src="{{  small_foto.url }}" width="{{ small_foto.width }}" height="{{ small_foto.height }}" class="img-responsive">
+						 {% endthumbnail %}
+						<span class="text">{{ fotoGu.comment }}<span>{{ fotoGu.comment }}</span></span>
+					</a>
+				</li>
+			{% endfor %}
+			
+			{% for fotoBr in fotosBr %}
+				<li class="mix br col-sm-4 mix_all" style="display: block; opacity: 1;">
+					<a href="{{  fotoBr.image_location.url }}">
+						{% thumbnail fotoBr.image_location "379x253" crop="50%" as small_foto %}
+							<img alt="" src="{{  small_foto.url }}" width="{{ small_foto.width }}" height="{{ small_foto.height }}" class="img-responsive">
+						 {% endthumbnail %}
+						<span class="text">{{ fotoBr.comment }}<span>{{ fotoBr.comment }}</span></span>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
     </div>
     <h2>Portfolio Text</h2>
     <hr>

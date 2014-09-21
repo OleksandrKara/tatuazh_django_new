@@ -17,18 +17,7 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('tatuazhkiev.views',
-    (r'^home/$', 'home_handler'),
     (r'^photo/$', 'photo_handler'),
-	#(r'^$', 'main_page'),
-	#(r'^index.html/?$', 'main_page'),
-	#(r'^index/?$', 'main_page'),
-	#(r'^foto/$', 'foto_handler'),
-	#(r'^foto/foto-brovi/$', 'foto_handler'),
-	#(r'^foto/foto-tatuazh-gub/$', 'foto_gubi_handler'),
-	#(r'^foto/foto-tatuazh-glaz/$', 'foto_glaza_handler'),
-	#(r'^ceni/$', 'ceni_handler'),
-	#(r'^otzivi/$', 'otzivi_handler'),
-	#(r'^faq/$', 'faq_handler'),
 )
 
 #special for index.html

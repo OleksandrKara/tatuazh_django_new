@@ -24,5 +24,9 @@ def faq_handler(request):
     return render_to_response('faq.html')
 
 def photo_handler(request):
-    fotos = Foto.objects.filter(type="Br")
-    return render_to_response('flatpages/photo.html', {'fotos' : fotos}, context_instance = RequestContext(request))
+    fotosGl = Foto.objects.filter(type="Gl")
+    fotosGu = Foto.objects.filter(type="Gu")
+    fotosBr = Foto.objects.filter(type="Br")
+    return render_to_response(template_name='flatpages/photo.html',
+	                          dictionary={'fotosGl' : fotosGl, 'fotosGu': fotosGu, 'fotosBr': fotosBr},
+							  context_instance=RequestContext(request))
