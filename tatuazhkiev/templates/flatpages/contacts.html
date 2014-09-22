@@ -20,23 +20,7 @@
 {% endblock %}
 
 {% block menu %}
-<!-- Collect the nav links, forms, and other content for toggling 
-second_item third_item forth_item five_item six_item-->
-      <div class="navbar-right navbar-collapse in" id="bs-example-navbar-collapse-1" style="height: auto;">
-        <ul class="nav navbar-nav">
-          <li><a href="{{ first_item }}">главная</a></li>
-          <li class="dropdown"> <a href="{{ second_item }}" class="dropdown-toggle" data-toggle="dropdown">Статьи</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">статья 1</a></li>
-              <li><a href="#">статья 2</a></li>
-            </ul>
-          </li>
-		  <li><a href="{{ third_item }}">фото</a></li>
-          <li><a href="{{ forth_item }}">цены</a></li>
-          <li class="active"><a href="{{ five_item }} ">контакты</a></li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
+	{{ block.super }}
 {% endblock %}
 
 {% block slider %}{% endblock %}
