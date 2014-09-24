@@ -44,8 +44,9 @@ urlpatterns += patterns('tatuazhkiev.fotos.views',
 	(r'^xhr_test$', 'xhr_test'),
 )
 
-
-
+urlpatterns += patterns('',
+	(r'^articles/', include('tatuazhkiev.articles.urls')),
+)
 
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -7,6 +7,7 @@ https://docs.djangoproject.com/en/1.6/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.6/ref/settings/
 """
+# coding: utf-8
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -47,6 +48,8 @@ INSTALLED_APPS = (
 	'tinymce',
     'flatpages_tinymce',
 	'tatuazhkiev.mymenu',
+	'tatuazhkiev.articles',
+	'disqus',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -145,3 +148,6 @@ TINYMCE_DEFAULT_CONFIG = {
     # use absolute urls when inserting links/images
     'relative_urls': False,
 }
+
+#DISQUS_API_KEY = '3254075'
+DISQUS_WEBSITE_SHORTNAME = 'tatuazhkiev'
